@@ -8,4 +8,4 @@ Temporary fix for GOKZ bots' broken animation using unnecessarily complicated co
 
 ## Installation ##
 1. Grab the latest release from the release page and unzip it in your sourcemod folder.
-2. Restart the server or type `sm plugins load bot-gloves` in the console to load the plugin.
+2. Restart the server or type `sm plugins load gokz-botmodelfix` in the console to load the plugin.
