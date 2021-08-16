@@ -13,7 +13,7 @@ public Plugin myinfo =
 	name = "GOKZ Bot Model Fix",
 	author = "zer0.k",
 	description = "Fix GOKZ bots having broken animation in third person",
-	version = "1.0",
+	version = "1.1",
 	url = "https://github.com/zer0k-z/gokz-botmodelfix"
 };
 Handle gH_DHooks_OnSetEntityModel;
@@ -104,6 +104,10 @@ public MRESReturn DHooks_OnSetEntityModel(int client, Handle params)
 
 public void RequestFrame_FixBotModel(int client)
 {
+	if (!IsClientInGame(client) || !IsFakeClient(client) || IsClientSourceTV(client))
+	{
+		return;
+	}
 	switch (GetClientTeam(client))
 	{
 		case CS_TEAM_T:
